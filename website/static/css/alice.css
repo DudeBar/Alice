@@ -1,0 +1,101 @@
+body {
+    background-color: #EDEDED !important;
+}
+
+@font-face {
+  font-family: "Alice";
+  src: url('Alice.ttf');
+}
+h1 { font-family: "Kimberley", sans-serif }
+
+a {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.alice-head{
+    background-color: #EDEDED !important;
+    /*background-image: url('../img/image-fond3.jpg');
+    background-size: 20%;*/
+}
+
+.main-color {
+    color: #056E09;
+}
+
+.alice-title {
+    font-family: Alice;
+    font-size: 24px;
+    text-align: center;
+}
+
+.alice-text {
+    font-family: Alice;
+    font-size: 20px;
+}
+
+.alice-pink {
+    color: #a5375e;
+}
+
+.text-header {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.alice-title-background1 {
+    background-image: url('../img/lianes3.png'), url('../img/lianes4.png');
+    background-size: 70px;
+    background-repeat: no-repeat;
+    background-position: left, right;
+}
+
+.alice-menu {
+    font-family: Alice;
+    margin-left: 5px;
+    padding-top: 5px;
+    font-size: 22px;
+}
+
+.engrenage1{
+    background-image: url('../img/engrenage12.png');
+    width: 350px;
+    height: 800px;
+    position: absolute;
+    background-repeat: no-repeat;
+    margin-top: 80px;
+    opacity: 0.2;
+}
+
+.horloge {
+    background-image: url('../img/horloge2.png');
+    background-repeat: no-repeat;
+    background-size: 60%;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    right: 0px;
+    top: 80px;
+    opacity: 0.1;
+}
+
+.engrenage2{
+    background-image: url('../img/engrenages2.png');
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    right: 20%;
+    margin-top: 80px;
+}
+
+.select-tea {
+    background-image: url('../img/tea.png');
+    height: 19px;
+    background-repeat: no-repeat;
+}
+
+.alice-thumbnail {
+    width: 150px;
+}

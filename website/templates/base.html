@@ -1,0 +1,84 @@
+{% load i18n %}
+{% load bootstrap3 %}
+<!DOCTYPE html>
+<html>
+<head profile="http://www.w3.org/2005/10/profile">
+    <title>Au Bois d'Alice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta charset="utf-8">
+    <link rel="icon"
+          type="image/x-icon"
+          href="/website/static/img/favicon.ico">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="/static/css/alice.css">
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% block head %}
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    {% bootstrap_messages %}
+    <div class="engrenage1"></div>
+    <div class="horloge"></div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <img class="col-xs-12 col-sm-12" src="../static/img/bandeau2.png">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12 text-header">
+            <b class="main-color">Marie Jean</b> votre Artisant Fleuriste des Beaux Arts
+        </div>
+    </div>
+
+    <div class="col-lg-offset-1 col-md-offset-1 col-md-3 col-lg-3">
+        <div class="col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading alice-title-background1">
+                    <div class="alice-title main-color"><b>Au Bois d'Alice</b></div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-1 col-lg-1 {% if nav_id == "home" %}glyphicon glyphicon-grain{% endif %}"></div>
+                    <div class="col-md-10 col-lg-10 alice-text">
+                        <a href="{% url "home" %}"><span {% if nav_id == "home" %}class="alice-pink"{% endif %}>Accueil</span></a>
+                    </div>
+                    <div class="col-md-1 col-lg-1 {% if nav_id == "galerie" %}glyphicon glyphicon-grain{% endif %}"></div>
+                    <div class="col-md-10 col-lg-10 alice-text">
+                        <a href="{% url "galerie" %}"><span {% if nav_id == "galerie" %}class="alice-pink"{% endif %}>Galerie</span></a>
+                    </div>
+                    <div class="col-md-1 col-lg-1 {% if nav_id == "prestation" %}glyphicon glyphicon-grain{% endif %}"></div>
+                    <div class="col-md-10 col-lg-10 alice-text">
+                        <a href="{% url "prestation" %}"><span {% if nav_id == "prestation" %}class="alice-pink"{% endif %}>Prestations</span></a>
+                    </div>
+                    <div class="col-md-1 col-lg-1 {% if nav_id == "map" %}glyphicon glyphicon-grain{% endif %}"></div>
+                    <div class="col-md-10 col-lg-10 alice-text">
+                        <a href="{% url "map" %}"><span {% if nav_id == "map" %}class="alice-pink"{% endif %}>Nous Trouver</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading alice-title-background1">
+                    <div class="alice-title main-color"><b>Artisan Fleuriste</b></div>
+                </div>
+                <div class="panel-body">
+                    <div class="col-md-1 col-lg-1 glyphicon glyphicon-leaf"></div><div class="col-md-10 col-lg-10"><p>13 Rue Proudhon<br>34090 Montpellier</p></div>
+                    <div class="col-md-1 col-lg-1 glyphicon glyphicon-leaf"></div><div class="col-md-10 col-lg-10"><p><span class="alice-text">Tel:</span> 09 83 06 38 03</p></div>
+                    <div class="col-md-1 col-lg-1 glyphicon glyphicon-leaf"></div><div class="col-md-10 col-lg-10"><p><span class="alice-text">Mail:</span> marie@auboisdalice.fr</p></div>
+                    <div class="col-md-1 col-lg-1 glyphicon glyphicon-leaf"></div><div class="col-md-10 col-lg-10"><p><span class="alice-text"><a href="http://auboisdalice.florajet.com/">FloraJet</a></span></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>

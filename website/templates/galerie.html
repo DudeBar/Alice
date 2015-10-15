@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="col-md-7 col-lg-7 ">
+        {% for gallery in galleries %}
+            <div class="media well well-sm">
+                <div class="media-left">
+                    <a href="#">
+                        <img src="{{ media_root }}/media/{{ gallery.thumbnail }}" class="alice-thumbnail">
+                    </a>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading alice-title">{{ gallery.name }}</h4>
+                    <div style="text-align: center">{{ gallery.description }}</div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
