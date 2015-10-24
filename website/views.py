@@ -1,7 +1,9 @@
+import json
+from django.http import JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
-from website.models import Gallery
+from website.models import Gallery, Images
 
 
 def home(request):
@@ -15,6 +17,16 @@ def galerie(request):
                       'galleries': galleries
                   }
                   )
+
+def get_photos(request, gallery_id):
+    images = Images.objects.filter(gallery=gallery_id)
+    images_urls = {}
+    cpt = 0
+    for image in images:
+        images_urls[cpt] = image.photo.url
+        cpt += 1
+    response = JsonResponse(images_urls)
+    return response
 
 def prestation(request):
     return render(request, "prestation.html", {'nav_id': 'prestation'})

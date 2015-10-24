@@ -10,4 +10,5 @@ urlpatterns = patterns(
     url(r'^galerie$', views.galerie, name='galerie'),
     url(r'^prestation', views.prestation, name='prestation'),
     url(r'^map', views.map, name='map'),
+    url(r'^photos/(?P<gallery_id>\d+)/?', views.get_photos, name='get_photos'),
     )+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

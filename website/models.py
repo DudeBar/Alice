@@ -8,6 +8,9 @@ class Gallery(models.Model):
     description = models.TextField(null=True)
     thumbnail = models.ImageField(upload_to="gallery")
 
+    def __unicode__(self):
+            return self.name
+
 
 class Images(models.Model):
     photo = models.ImageField()

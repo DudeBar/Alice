@@ -2,11 +2,44 @@
 {% load staticfiles %}
 
 {% block content %}
+    <script>
+        function get_photos(gallery_id, gallery_name){
+            $('#gallery-photos').modal('show');
+            $.get( "photos/"+gallery_id, function( data ) {
+                global_gallery = data;
+                $('#alice-photo').attr('src', global_gallery[current_photo]);
+            });
+            $('#myModalLabel').text(gallery_name);
+        }
+
+        function next_photo(){
+            if (current_photo+1 < Object.keys(global_gallery).length){
+                current_photo++;
+                $('#alice-photo').attr('src', global_gallery[current_photo]);
+            }
+            else {
+                current_photo = 0;
+                $('#alice-photo').attr('src', global_gallery[current_photo]);
+            }
+        }
+
+        function previous_photo(){
+            if (current_photo-1 < 0){
+                current_photo = Object.keys(global_gallery).length-1;
+                $('#alice-photo').attr('src', global_gallery[current_photo]);
+            }
+            else {
+                current_photo--;
+                $('#alice-photo').attr('src', global_gallery[current_photo]);
+            }
+        }
+    </script>
+
     <div class="col-md-7 col-lg-7 ">
         {% for gallery in galleries %}
             <div class="media well well-sm">
                 <div class="media-left">
-                    <a href="#">
+                    <a href="#" onclick="get_photos({{ gallery.pk }}, '{{ gallery.name }}');">
                         <img src="{{ media_root }}/media/{{ gallery.thumbnail }}" class="alice-thumbnail">
                     </a>
                 </div>
@@ -16,5 +49,24 @@
                 </div>
             </div>
         {% endfor %}
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="gallery-photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <div class="alice-title alice-pink"><h4 class="modal-title alice-title" id="myModalLabel"></h4></div>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    <img class="alice-photo" src="" id="alice-photo">
+                </div>
+                <div class="alice-footer">
+                    <button type="button" class="btn btn-default" onclick="previous_photo();"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                    <button type="button" class="btn btn-default" onclick="next_photo();"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                </div>
+            </div>
+        </div>
     </div>
 {% endblock %}
