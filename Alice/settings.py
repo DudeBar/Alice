@@ -25,7 +25,7 @@ SECRET_KEY = '2264p0am8%$k7%&&e34*ydr#8jw$aobt8^cc#=m3p_v%)f7jx!'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["site.auboisdalice.fr", "www.auboisdalice.fr"]
 
 
 # Application definition
