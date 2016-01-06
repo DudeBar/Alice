@@ -11,12 +11,13 @@ def home(request):
 
 def galerie(request):
     galleries = Gallery.objects.all()
-    return render(request, "galerie.html",
-                  {
-                      'nav_id': 'galerie',
-                      'galleries': galleries
-                  }
-                  )
+    return render(request, "galery.html", {'nav_id': 'galerie'})
+    # return render(request, "galerie.html",
+    #               {
+    #                   'nav_id': 'galerie',
+    #                   'galleries': galleries
+    #               }
+    #               )
 
 def get_photos(request, gallery_id):
     images = Images.objects.filter(gallery=gallery_id)

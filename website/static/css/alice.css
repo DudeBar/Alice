@@ -150,8 +150,8 @@ a {
 }
 
 .alice-photo {
-    width: 300px;
     align-content: center;
+    width: 550px;
 }
 
 .alice-left-panel {
@@ -161,4 +161,25 @@ a {
 .alice-footer {
     text-align: center;
     margin-bottom: 10px;
+}
+
+.thumb-img {
+    width: 250px;
+}
+
+.thumb-img2 {
+    height: 200px;
+    margin-left: 50px;
+}
+
+.rotate-right {
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+    transform: rotate(7deg);
+}
+
+.rotate-left {
+    -ms-transform: rotate(-8deg); /* IE 9 */
+    -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
+    transform: rotate(-8deg);
 }

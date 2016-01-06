@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <script>
+        function get_photos(pict_id){
+            $('#gallery-photos').modal('show');
+            $('#alice-photo').attr('src', "../static/img/album/"+pict_id+".jpg" );
+        }
+    </script>
+    <div class="col-md-7 col-lg-7">
+        <a href="#" onclick="get_photos('ph1');"><img class="thumb-img rotate-left" src="../static/img/album/ph1.jpg"></a>
+        <a href="#" onclick="get_photos('ph2');"><img class="thumb-img rotate-right" src="../static/img/album/ph2.jpg"></a>
+        <a href="#" onclick="get_photos('ph10');"><img class="thumb-img" src="../static/img/album/ph10.jpg"></a>
+        <a href="#" onclick="get_photos('ph3');"><img class="thumb-img rotate-right" src="../static/img/album/ph3.jpg"></a>
+        <a href="#" onclick="get_photos('ph4');"><img class="thumb-img" src="../static/img/album/ph4.jpg"></a>
+        <a href="#" onclick="get_photos('ph15');"><img class="thumb-img2 rotate-right" src="../static/img/album/ph15.jpg"></a>
+        <a href="#" onclick="get_photos('ph12');"><img class="thumb-img2 rotate-left" src="../static/img/album/ph12.jpg"></a>
+        <a href="#" onclick="get_photos('ph7');"><img class="thumb-img rotate-right" src="../static/img/album/ph7.jpg"></a>
+        <a href="#" onclick="get_photos('ph14');"><img class="thumb-img rotate-left" src="../static/img/album/ph14.jpg"></a>
+        <a href="#" onclick="get_photos('ph13');"><img class="thumb-img rotate-right" src="../static/img/album/ph13.jpg"></a>
+        <a href="#" onclick="get_photos('ph9');"><img class="thumb-img rotate-left" src="../static/img/album/ph9.jpg"></a>
+        <a href="#" onclick="get_photos('ph11');"><img class="thumb-img" src="../static/img/album/ph11.jpg"></a>
+        <a href="#" onclick="get_photos('ph8');"><img class="thumb-img" src="../static/img/album/ph8.jpg"></a>
+        <a href="#" onclick="get_photos('ph5');"><img class="thumb-img rotate-right" src="../static/img/album/ph5.jpg"></a>
+        <a href="#" onclick="get_photos('ph6');"><img class="thumb-img rotate-left" src="../static/img/album/ph6.jpg"></a>
+    </div>
+
+        <!-- Modal -->
+    <div class="modal fade" id="gallery-photos" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" style="margin-top: -10px" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body" style="text-align:center">
+                    <img class="alice-photo" src="" id="alice-photo">
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
