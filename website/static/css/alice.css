@@ -21,13 +21,14 @@ a {
 }
 
 .main-color {
-    color: #056E09;
+    color: #056E09 !important;
 }
 
 .alice-title {
     font-family: Alice;
     font-size: 24px;
     text-align: center;
+    color: rgba(0, 0, 0, 0.7);
 }
 
 .alice-text {
@@ -202,6 +203,18 @@ a {
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
+}
+
+.presta-title-icon-left {
+    color: #a5375e;
+    font-size: 12px;
+    padding-right: 10px;
+}
+
+.presta-title-icon-right {
+    color: #a5375e;
+    font-size: 12px;
+    padding-left: 10px;
 }
 
 .presta-prix {
