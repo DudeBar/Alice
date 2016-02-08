@@ -1,5 +1,6 @@
 body {
     background-color: #EDEDED !important;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
 }
 
 @font-face {
@@ -104,6 +105,23 @@ a {
     background-color: white;
 }
 
+.alice-panel-prestation {
+    background-color: white;
+    margin-top: 20px;
+}
+
+.alice-panel-prestation-left {
+    background-color: white;
+    transform: rotate(-3deg);
+    margin-top: 18px;
+}
+
+.alice-panel-prestation-right {
+    background-color: white;
+    transform: rotate(3deg);
+    margin-top: 20px;
+}
+
 .navbar-alice {
     background-color: white;
     text-align: center;
@@ -165,11 +183,13 @@ a {
 
 .thumb-img {
     width: 250px;
+    box-shadow: 5px 5px 2px #888888;
 }
 
 .thumb-img2 {
     height: 200px;
     margin-left: 50px;
+    box-shadow: 5px 5px 2px #888888;
 }
 
 .rotate-right {
@@ -182,4 +202,22 @@ a {
     -ms-transform: rotate(-8deg); /* IE 9 */
     -webkit-transform: rotate(-8deg); /* Chrome, Safari, Opera */
     transform: rotate(-8deg);
+}
+
+.presta-prix {
+    float: right;
+    margin-right: 20px;
+}
+
+.presta-list > li {
+    display: block;
+}
+.presta-list > li:before {
+    content: "\e239";
+    font-family: 'Glyphicons Halflings';
+    font-size: 12px;
+    position: relative;
+    margin-right: 5px;
+    color: #ccc;
+    margin-left: -20px;
 }
