@@ -205,6 +205,10 @@ a {
     transform: rotate(-8deg);
 }
 
+.presta-shadow {
+    box-shadow: 2px 2px 2px #888888;
+}
+
 .presta-title-icon-left {
     color: #a5375e;
     font-size: 12px;
