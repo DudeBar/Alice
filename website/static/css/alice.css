@@ -1,6 +1,7 @@
 body {
     background-color: #EDEDED !important;
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif !important;
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -237,4 +238,13 @@ a {
     margin-right: 5px;
     color: #ccc;
     margin-left: -20px;
+}
+
+.presta-image {
+    position: absolute;
+    top: -25px;
+    -ms-transform: rotate(15deg); /* IE 9 */
+    -webkit-transform: rotate(15deg); /* Chrome, Safari, Opera */
+    transform: rotate(15deg);
+    margin-left: 15px;
 }
